@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 class itemBase(BaseModel):
     title: str
-    body: str
+    description: str
 
 class item(itemBase):
     class Config():
@@ -24,7 +24,7 @@ class ShowUser(BaseModel):
 
 class Showitem(BaseModel):
     title: str
-    body:str
+    description:str
     creator: ShowUser
 
     class Config():

@@ -7,7 +7,7 @@ def get_all(db: Session):
     return items
 
 def create(request: schemas.item,db: Session):
-    new_item = models.item(title=request.title, body=request.body,user_id=1)
+    new_item = models.item(title=request.title, description=request.description,user_id=1)
     db.add(new_item)
     db.commit()
     db.refresh(new_item)

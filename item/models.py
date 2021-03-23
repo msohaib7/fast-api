@@ -8,7 +8,7 @@ class item(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
-    body = Column(String)
+    description = Column(String)
     user_id = Column(Integer, ForeignKey('users.id'))
 
     creator = relationship("User", back_populates="items")

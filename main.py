@@ -30,7 +30,7 @@ def show(id: int):
 
 class item(BaseModel):
     title: str
-    body: str
+    description: str
     published: Optional[bool]
 
 
